@@ -4,8 +4,7 @@ namespace oCooking\cpt;
 class RecipePostType
 
 {
-    const CAPABILITIES = [];
-    const CPT_SLUG = 'recipes'; 
+    const CPT_SLUG = 'recipe'; 
 
   
       // cette methode va nous permettre de declarer la création de notre customPostType
@@ -30,11 +29,17 @@ class RecipePostType
             'author', // les posts de ce CPT sont liés à un Auteur
             'thumbnail', // active les featured image
             'revisions', // active l'historique de versions
-            'custom-fields' // active les champs personnalisés (+tard)
+            'custom-fields' , // active les champs personnalisés (+tard)
+            'tags', 
+            'excerpt',
+            'comments '// autorise les commentaires
           ],
-          'capabilities'=> self ::CAPABILITIES, 
+
+          'capability_type'=> self::CPT_SLUG, // genere automatique le nouveau nom des capabilities
           'menu_position' => 0, // position dans le BO de WP
+          'map_meta_cap'=>true, 
           'menu_icon' => 'dashicons-food' // icône personnalisable https://developer.wordpress.org/resource/dashicons/
+        
         ]);
       }
 

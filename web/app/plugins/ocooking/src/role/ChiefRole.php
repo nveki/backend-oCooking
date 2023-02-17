@@ -2,10 +2,10 @@
 
 namespace oCooking\role;
 
-class ContributorRole
+class ChiefRole
 {
 
-    const ROLE_SLUG = "contributors";
+    const ROLE_SLUG = "chiefs";
     
     public static function register()
     {
@@ -17,12 +17,14 @@ class ContributorRole
         $capabilities = [
             'edit_recipes' => true,
             'edit_published_recipes'=>true, 
-            'manage_categories' => true,
+            'publish_recipes'=> true,
+            'delete_recipes'=> true, 
+            'manage_categories' => true, 
             'upload_files'=>true,
             "read" => true // on donne l'accès a la lecture aux clients*/
         ];
 
-        add_role(self::ROLE_SLUG, "Contributeur", $capabilities);
+        add_role(self::ROLE_SLUG, "Chef", $capabilities);
     }
 
     //A la desactivation du plugin on supprime le role Dev
