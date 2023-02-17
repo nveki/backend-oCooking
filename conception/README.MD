@@ -20,7 +20,7 @@ On va devoir créer :
 
 ### 3 Custom Roles
 
-- UserRole
+- UserRole ( pas besoin de CR ici car pas d'inscription )
 - ContributorRole
 - ChiefRole
 
