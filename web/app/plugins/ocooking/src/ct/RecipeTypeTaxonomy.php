@@ -6,7 +6,7 @@ use oCooking\cpt\RecipePostType;
 
 class RecipeTypeTaxonomy{
 
-    const CT_SLUG = 'recipe-type'; 
+    const CT_SLUG = 'recipetype'; 
   public static function register(){
     
 
@@ -16,7 +16,7 @@ class RecipeTypeTaxonomy{
         [
           'labels' => [ // intitulés de ce CT, dans le BO
             'name' => 'Type de recette',
-            'new_item_name' => 'Nouveau Type de Recette'
+            'new_item_name' => 'Nouveau type de Recette'
           ],
           'public' => true,
           'show_in_rest' => true

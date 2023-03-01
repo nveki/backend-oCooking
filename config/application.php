@@ -135,3 +135,8 @@ Config::apply();
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
+
+// On défini la clé secrete qui permet de générer les Token
+define('JWT_AUTH_SECRET_KEY', 'raclettedetennis');
+define('JWT_AUTH_CORS_ENABLE', true);
+
